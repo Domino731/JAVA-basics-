@@ -33,5 +33,34 @@ public class Main {
         nameToMeal.put("Andrew", "Pizza");
 
         System.out.println("Hello " + name);
+
+
+        // SIMPLE CRUD APP
+        Boolean shouldContinue = true;
+
+
+        System.out.println("Choose option:");
+
+        String[] menuOptions = {"1. Show guests", "2. Add new guest", "3. Show meals", "4. Find by phone number", "5. Exit"};
+
+        while (shouldContinue){
+            // show user available options
+            for (String option : menuOptions){
+                System.out.println(option);
+            }
+
+            // holding user choice
+            int userChoice = scanner.nextInt();
+
+            // checking whether user have chosen one of options
+            switch (userChoice) {
+                case 1 -> shouldContinue = false;
+                case 2 -> shouldContinue = false;
+                case 3 -> shouldContinue = false;
+                case 4 -> shouldContinue = false;
+                case 5 -> shouldContinue = false;
+            }
+        }
+
     }
 }
