@@ -35,7 +35,10 @@ public class Main {
         System.out.println("Hello " + name);
 
 
-        // SIMPLE CRUD APP
+        // SIMPLE CRUD APP ///////////////////////////////////////////////////////
+
+        // classes
+        Party party = new Party();
         Boolean shouldContinue = true;
 
 
@@ -54,11 +57,16 @@ public class Main {
 
             // checking whether user have chosen one of options
             switch (userChoice) {
-                case 1 -> shouldContinue = false;
-                case 2 -> shouldContinue = false;
-                case 3 -> shouldContinue = false;
-                case 4 -> shouldContinue = false;
-                case 5 -> shouldContinue = false;
+                case 1:
+                     party.displayGuests();
+                case 2:
+                    shouldContinue = false;
+                case 3:
+                    shouldContinue = false;
+                case 4:
+                    shouldContinue = false;
+                case 5:
+                    shouldContinue = false;
             }
         }
 
