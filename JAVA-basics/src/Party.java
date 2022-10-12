@@ -20,10 +20,12 @@ public class Party {
 
         // phone number
         System.out.println("Enter guest age");
-        String phoneNumber = scanner.nextLine();
-        guests.put(phoneNumber, new Guest(name, surname,age,phoneNumber));
+        int phoneNumber = scanner.nextInt();
+
+        guests.put(String.valueOf(phoneNumber), new Guest(name, surname,age, String.valueOf(phoneNumber)));
     };
 
+    // display all guests
     public void displayGuests() {
         if(guests.size() == 0){
             System.out.println("You haven't added nobody yet");
@@ -34,5 +36,17 @@ public class Party {
             });
         }
 
+    }
+
+    // find guest by number
+    public void findGuestByNumber(){
+        int phoneNumber = scanner.nextInt();
+        Guest result = guests.get(String.valueOf(phoneNumber));
+        if(result != null){
+            result.display();
+        }
+        else {
+            System.out.println("Guest not fount");
+        }
     }
 }

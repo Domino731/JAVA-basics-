@@ -68,7 +68,9 @@ public class Main {
                 case 3:
 //                    shouldContinue = false;
                 case 4:
-//                    shouldContinue = false;
+                     party.findGuestByNumber();
+                     System.out.println("-----------------");
+                      break;
                 case 5:
                     shouldContinue = false;
                     break;
