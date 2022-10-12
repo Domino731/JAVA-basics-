@@ -59,14 +59,17 @@ public class Main {
             switch (userChoice) {
                 case 1:
                      party.displayGuests();
+                     break;
                 case 2:
-                    shouldContinue = false;
+                     party.addGuest();
+                     break;
                 case 3:
-                    shouldContinue = false;
+//                    shouldContinue = false;
                 case 4:
-                    shouldContinue = false;
+//                    shouldContinue = false;
                 case 5:
                     shouldContinue = false;
+                    break;
             }
         }
 

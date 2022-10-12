@@ -1,12 +1,16 @@
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class Party {
-    private List<String> guests = new ArrayList<String>();
+    private final List<String> guests = new ArrayList<String>();
+    private final Scanner scanner = new Scanner(System.in);
 
     /** add new guest to guests list */
-    public void addGuest(String name){
-          guests.add(name);
+    public void addGuest(){
+        System.out.println("Enter guest name");
+        String name = scanner.nextLine();
+        guests.add(name);
     };
 
     public void displayGuests() {
