@@ -59,9 +59,11 @@ public class Main {
             switch (userChoice) {
                 case 1:
                      party.displayGuests();
+                     System.out.println("-----------------");
                      break;
                 case 2:
                      party.addGuest();
+                     System.out.println("-----------------");
                      break;
                 case 3:
 //                    shouldContinue = false;
