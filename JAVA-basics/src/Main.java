@@ -2,7 +2,7 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hey, what's your name?Domino");
+        System.out.println("Hey, let's have a party, what's your name?");
 
         Scanner scanner = new Scanner(System.in);
         // read name from terminal
@@ -44,7 +44,7 @@ public class Main {
 
         System.out.println("Choose option:");
 
-        String[] menuOptions = {"1. Show guests", "2. Add new guest", "3. Show meals", "4. Find by phone number", "5. Exit"};
+        String[] menuOptions = {"1. Show guests", "2. Add new guest", "3. Remove guest", "4. Find by phone number", "5. Exit"};
 
         while (shouldContinue){
             // show user available options
@@ -66,7 +66,9 @@ public class Main {
                      System.out.println("-----------------");
                      break;
                 case 3:
-//                    shouldContinue = false;
+                     party.removeGuest();
+                    System.out.println("-----------------");
+                    break;
                 case 4:
                      party.findGuestByNumber();
                      System.out.println("-----------------");

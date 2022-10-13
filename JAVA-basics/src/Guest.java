@@ -1,4 +1,4 @@
-public class Guest {
+public class Guest implements GuestInterface {
     private String name = "";
     private String surname = "";
     private int age = 0;

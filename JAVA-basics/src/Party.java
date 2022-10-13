@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Party {
+public class Party implements PartyInterface {
     private final Map<String, Guest> guests = new HashMap<String, Guest>();
     private final Scanner scanner = new Scanner(System.in);
 
@@ -35,7 +35,6 @@ public class Party {
                 guest.display();
             });
         }
-
     }
 
     // find guest by number
@@ -46,7 +45,19 @@ public class Party {
             result.display();
         }
         else {
-            System.out.println("Guest not fount");
+            System.out.println("Guest not found");
+        }
+    }
+
+    public void removeGuest(){
+        System.out.println("Enter guest phone number");
+        int phoneNumber = scanner.nextInt();
+        Guest result = guests.get(String.valueOf(phoneNumber));
+        if(result != null){
+            guests.remove(String.valueOf(phoneNumber));
+        }
+        else {
+            System.out.println("Guest not found");
         }
     }
 }
